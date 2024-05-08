@@ -4,6 +4,7 @@ require("dotenv").config();
 
 // import route files as needed
 const pdRoutes = require('./routes/pdRoutes');
+const indexRoutes = require('./routes/indexRoutes');
 
 
 // initialize
@@ -26,6 +27,7 @@ app.use((req,res,next) =>{
 
   //set up routes to use
   app.use('/',pdRoutes);
+  app.use('/',indexRoutes);
 
   //default error handler 
   app.use((err, req, res, next) => {
